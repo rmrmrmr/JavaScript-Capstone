@@ -1,5 +1,4 @@
-import getMovies from './modules/getMovies';
-import renderMovies from './modules/renderMovies';
+import getMovies from './modules/getMovies.js';
 import './style.css';
 
 document.addEventListener('DOMContentLoaded', getMovies);

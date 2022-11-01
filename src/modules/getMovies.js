@@ -1,4 +1,4 @@
-import renderMovies from './renderMovies';
+import renderMovies from './renderMovies.js';
 
 const getMovies = async () => {
   const baseURL = 'https://api.tvmaze.com/search/shows?q=';
