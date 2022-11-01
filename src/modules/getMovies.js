@@ -1,4 +1,3 @@
-import { some } from 'lodash';
 import renderMovies from './renderMovies.js';
 import renderSide from './sideInfo.js';
 

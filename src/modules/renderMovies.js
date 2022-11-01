@@ -1,9 +1,8 @@
-import renderSide from "./sideInfo";
+import renderSide from './sideInfo.js';
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
   moviesInfo.forEach((element) => {
-    console.log(element);
     const movieName = element.show.name;
     const movieImgParent = element.show.image;
     const movieWrap = document.createElement('div');

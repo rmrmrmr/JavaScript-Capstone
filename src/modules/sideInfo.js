@@ -9,6 +9,6 @@ const renderSide = (title, score, genre, movieImg) => {
   sideGenre.innerHTML = genre;
 
   document.body.style.backgroundImage = `url(${movieImg})`;
-}
+};
 
 export default renderSide;
