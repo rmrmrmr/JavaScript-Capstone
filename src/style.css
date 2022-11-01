@@ -10,16 +10,17 @@ body {
   background-color: #fff;
   font-family: 'Krona One', sans-serif;
   width: 100vw;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
+  /* overflow: hidden; */
 }
 
 #header {
   width: 100%;
+  height: 15vh;
   display: flex;
-  padding: 3rem;
+  padding: 1rem 3rem;
   justify-content: space-between;
   position: sticky;
   border: 1px solid gray;
@@ -47,12 +48,60 @@ body {
 
 footer {
   width: 100%;
+  height: 8vh;
   display: flex;
-  padding: 3rem;
+  padding: 1rem 3rem;
   border: 1px solid gray;
 }
 
 #footer-text {
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+}
+
+#currentSect {
+  width: 35vw;
+  height: 100%;
+  text-align: center;
+}
+
+#listSect {
+  width: 60vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 40px;
+  padding: 5vh 0;
+}
+
+.movieWrap {
+  width: 30%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: solid black;
+  border-radius: 10px;
+  padding: 1% 0;
+}
+
+.movieTitle {
+  width: 70%;
+  height: max-content;
+  margin: 0 15%;
+  padding: 5px 0;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.463);
+  text-align: center;
+}
+
+.movieImg {
+  width: 100%;
+  height: 70%;
+}
+
+.movieBttn {
+  height: 10%;
+  align-self: flex-end;
 }
