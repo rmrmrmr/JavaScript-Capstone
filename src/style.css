@@ -1,3 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
-  background-color: plum;
+  background-color: #fff;
+  font-family: 'Krona One', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  padding: 3rem;
+  justify-content: space-between;
+  position: sticky;
+  border: 1px solid gray;
+  align-items: center;
+}
+
+#logo-img {
+  width: 70px;
+  height: 70px;
+}
+
+#navbar {
+  width: 40%;
+}
+
+#nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-list li a {
+  color: black;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  padding: 3rem;
+  border: 1px solid gray;
+}
+
+#footer-text {
+  font-weight: bold;
+  font-size: 0.7rem;
 }
