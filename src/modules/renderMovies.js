@@ -1,6 +1,9 @@
+import renderSide from "./sideInfo";
+
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
   moviesInfo.forEach((element) => {
+    console.log(element);
     const movieName = element.show.name;
     const movieImgParent = element.show.image;
     const movieWrap = document.createElement('div');
@@ -11,6 +14,8 @@ const renderMovies = (moviesInfo) => {
     } else {
       const movieImg = element.show.image.medium;
       movieWrap.style.backgroundImage = `url(${movieImg})`;
+      movieWrap.style.backgroundSize = 'cover';
+      movieWrap.style.backgroundRepeat = 'no-repeat';
     }
     listSect.append(movieWrap);
     const movieTitle = document.createElement('p');
@@ -32,6 +37,24 @@ const renderMovies = (moviesInfo) => {
     reserveBttn.classList.add('resBttn');
     reserveBttn.innerHTML = 'Reserve';
     movieWrap.append(reserveBttn);
+
+    movieWrap.addEventListener('click', () => {
+      const movieName = element.show.name;
+      const movieScore = element.score;
+      const movieGenre = element.show.genres;
+      const movieImgParent = element.show.image;
+      if (movieImgParent === null) {
+        const movieImg = 'https://img.freepik.com/premium-vector/cinema-movie-background-popcorn-filmstrip-clapboard-tickets-movie-time-background_41737-248.jpg?w=2000';
+        movieWrap.style.backgroundImage = `url(${movieImg})`;
+        renderSide(movieName, movieScore, movieGenre, movieImg);
+      } else {
+        const movieImg = element.show.image.original;
+        movieWrap.style.backgroundImage = `url(${movieImg})`;
+        movieWrap.style.backgroundSize = 'cover';
+        movieWrap.style.backgroundRepeat = 'no-repeat';
+        renderSide(movieName, movieScore, movieGenre, movieImg);
+      }
+    });
   });
 };
 

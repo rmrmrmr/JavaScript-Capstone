@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  color: #fff;
 }
 
 body {
@@ -13,17 +14,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  backdrop-filter: blur(5px);
+  background-size: cover;
 }
 
 #header {
-  width: 100%;
+  width: 100vw;
   height: 15vh;
   display: flex;
   padding: 1rem 3rem;
   justify-content: space-between;
-  position: sticky;
-  border: 1px solid gray;
+  position: fixed;
+  border-bottom: 1px solid gray;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.548);
+  z-index: 10;
 }
 
 #logo-img {
@@ -41,16 +46,13 @@ body {
   justify-content: space-between;
 }
 
-#nav-list li a {
-  color: black;
-}
-
 footer {
   width: 100%;
   height: 8vh;
   display: flex;
   padding: 1rem 3rem;
   border: 1px solid gray;
+  margin-top: 15vh;
 }
 
 #footer-text {
@@ -58,24 +60,21 @@ footer {
   font-size: 0.8rem;
 }
 
-#currentSect {
-  width: 35vw;
-  height: 100%;
-  text-align: center;
-}
-
 #listSect {
+  top: 15vh;
+  position: relative;
   width: 60vw;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  column-gap: 5%;
   row-gap: 40px;
   padding: 5vh 0;
 }
 
 .movieWrap {
-  width: 30%;
+  width: 25%;
   height: 40vh;
   display: flex;
   flex-wrap: wrap;
@@ -104,4 +103,46 @@ footer {
 .movieBttn {
   height: 10%;
   align-self: flex-end;
+  background-color: rgb(50, 73, 73);
+  color: rgb(247, 247, 247);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  align-self: flex-end;
+}
+
+#currentSect {
+  top: 20vh;
+  position: relative;
+  width: 35vw;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10vh;
+}
+
+#sideTitle {
+  font-size: 3rem;
+}
+
+#sideScoreWrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+#sideImg {
+  width: 40px;
+  height: 40px;
+}
+
+#sideGenre {
+  background-color: rgba(127, 176, 255, 0.686);
+  border: solid rgb(127, 176, 255);
+  color: #fff;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 1rem;
 }
