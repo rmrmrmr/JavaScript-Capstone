@@ -5,6 +5,7 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --black-modal: hsl(0, 0%, 0%, 0.75);
+  --shadow: 0 1px 3px hsl(219, 9%, 45%, 0.75);
 }
 
 * {
@@ -156,8 +157,17 @@ footer {
   font-size: 1rem;
 }
 
-/* start popup syle */
+.bttnsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  height: max-content;
+  margin-top: auto;
+  gap: 10px;
+  justify-content: center;
+}
 
+/* start popup syle */
 .show {
   display: flex;
 }
@@ -166,7 +176,8 @@ footer {
   display: none;
 }
 
-.popup-bg {
+.popup-bg,
+.reservation-bg {
   position: fixed;
   left: 0;
   top: 0;
@@ -180,34 +191,34 @@ footer {
   background-color: var(--black-modal);
 }
 
-.popup-container {
+.popup-container,
+.reservation-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.popup-img {
+.popup-img,
+.reservation-img {
   border-radius: 8px;
-  position: relative;
   z-index: 1;
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
-  top: 7.5%;
-  left: -1%;
 }
 
-.popup-info {
+.popup-info,
+.reservation-info {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: -2%;
-  left: 0.5%;
   width: 50%;
   background: var(--black);
   padding: 2rem;
+  margin-left: 1.1rem;
   border: 1px solid var(--black);
 }
 
-.popup-title-wrap {
+.popup-title-wrap,
+.reservation-title-wrap {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -215,19 +226,22 @@ footer {
   margin-bottom: 20px;
 }
 
-.tittle-popup {
+.tittle-popup,
+.tittle-res {
   color: var(--white);
   font-size: 1.7rem;
   letter-spacing: 0.2rem;
 }
 
-.popup-summary {
+.popup-summary,
+.rest-summary {
   color: var(--white);
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
 }
 
-.popup-moreInfo {
+.popup-moreInfo,
+.reser-moreInfo {
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -239,7 +253,8 @@ footer {
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
   text-align: center;
-  width: 260px;
+  align-self: center;
+  width: fit-content;
   border-radius: 8px;
   padding: 0.4rem;
 }
@@ -259,15 +274,94 @@ footer {
 .rating {
   border: 3px solid purple;
 }
-
 /* End popup syle */
 
-.bttnsWrap {
+/* start display comments style */
+.display-comments {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-  height: max-content;
-  margin-top: auto;
-  gap: 10px;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
+
+.title-comments-wrap,
+.name-comment-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.title-comments,
+.add-comment-title {
+  letter-spacing: 0.2rem;
+}
+
+.counter-comments, 
+.user-comment {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+
+.show-comments-wrap {
+  margin-top: 10px;
+}
+
+.show-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 5px;
+}
+
+.user-name-comment {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;  
+}
+/* End display comments style */
+
+/* Start form style */
+.Add-comment-wrap,
+.Add-comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.form-input, 
+.form-textarea,
+.comment-btn {
+  padding: 0.5rem;
+  background: var(--light-grayish-blue);
+  border: 1px solid var(--dark-grayish-blue);
+  font-size: 0.8rem;
+  color: var(--black);
+  font-family: 'Krona One', sans-serif;
+}
+
+.form-input {
+  width: 22%;
+}
+
+.form-textarea {
+  width: 40%;
+  height: auto;
+}
+
+.comment-btn {
+  width: 8rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+/* End form style */
