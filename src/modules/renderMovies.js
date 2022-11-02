@@ -61,6 +61,7 @@ const renderMovies = (moviesInfo) => {
       popUp.classList.remove('hide');
       document.querySelector('.close-popup').addEventListener('click', () => {
         popUp.classList.add('hide');
+        window.location.reload();
       });
     });
   });
