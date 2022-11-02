@@ -1,5 +1,6 @@
 import renderSide from './sideInfo.js';
 import showPopup, { popUp } from './showPopup.js';
+import { getLikes, postLike } from './likes.js';
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
@@ -22,21 +23,38 @@ const renderMovies = (moviesInfo) => {
     movieTitle.classList.add('movieTitle');
     movieTitle.innerHTML = movieName;
     movieWrap.append(movieTitle);
-    const likeBttn = document.createElement('button');
-    likeBttn.classList.add('movieBttn');
-    likeBttn.classList.add('likeBttn');
-    likeBttn.innerHTML = 'Likes';
-    movieWrap.append(likeBttn);
+    const bttnsWrap = document.createElement('div');
+    bttnsWrap.classList.add('bttnsWrap');
     const commentBttn = document.createElement('button');
     commentBttn.classList.add('movieBttn');
     commentBttn.classList.add('commentBttn');
     commentBttn.innerHTML = 'Comments';
-    movieWrap.append(commentBttn);
+    bttnsWrap.append(commentBttn);
     const reserveBttn = document.createElement('button');
     reserveBttn.classList.add('movieBttn');
     reserveBttn.classList.add('resBttn');
     reserveBttn.innerHTML = 'Reserve';
-    movieWrap.append(reserveBttn);
+    bttnsWrap.append(reserveBttn);
+    const likeBttn = document.createElement('button');
+    likeBttn.classList.add('movieBttn');
+    likeBttn.classList.add('likeBttn');
+    const loadLikes = async (likeBttn) => {
+      const itemID = element.show.id;
+      const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ti2zNOtDb0yQaQ0kotzz/likes/';
+      const res = await fetch(baseURL);
+      const likesNumberArr = await res.json();
+      let likesNum = 0;
+      likesNumberArr.forEach((element) => {
+        if (element.item_id === itemID) {
+          likesNum = element.likes;
+        }
+      });
+      const numberOfLikes = likesNum.toString();
+      likeBttn.innerHTML = `Likes: ${numberOfLikes}`;
+    };
+    loadLikes(likeBttn);
+    bttnsWrap.append(likeBttn);
+    movieWrap.append(bttnsWrap);
 
     movieWrap.addEventListener('click', () => {
       const movieName = element.show.name;
@@ -63,6 +81,14 @@ const renderMovies = (moviesInfo) => {
         popUp.classList.add('hide');
         window.location.reload();
       });
+    });
+
+    likeBttn.addEventListener('click', async () => {
+      const movieID = element.show.id;
+      // const movieID = 'item4';
+      await postLike(movieID);
+      const num = await getLikes(movieID);
+      likeBttn.innerHTML = `Likes:${num}`;
     });
   });
 };

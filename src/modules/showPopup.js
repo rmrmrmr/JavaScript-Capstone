@@ -1,4 +1,4 @@
-export const popUp = document.querySelector('.popup');
+export const popUp = document.getElementById('commentsPopup');
 
 const showPopup = ({ show }) => {
   const popupBg = document.createElement('div');

@@ -93,6 +93,16 @@ footer {
   padding: 1% 0;
 }
 
+.bttnsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  height: max-content;
+  margin-top: auto;
+  gap: 10px;
+  justify-content: center;
+}
+
 .movieTitle {
   width: 70%;
   height: max-content;
@@ -261,3 +271,5 @@ footer {
 }
 
 /* End popup syle */
+
+
