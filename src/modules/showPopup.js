@@ -1,9 +1,8 @@
-export const popUp = document.getElementById('commentsPopup');
+export const popUp = document.querySelector('.popup');
 
 const showPopup = ({ show }) => {
   const popupBg = document.createElement('div');
   popupBg.classList.add('popup-bg');
-  popupBg.style.backgroundImage = `url(${show.image})`;
   popUp.appendChild(popupBg);
 
   const popupContainer = document.createElement('section');
@@ -93,6 +92,100 @@ const showPopup = ({ show }) => {
     rating.innerHTML = 'Rating: Coming soon';
   }
   popupMoreInfo.appendChild(rating);
+
+  const displayComments = document.createElement('div');
+  displayComments.classList.add('display-comments');
+  popupInfo.appendChild(displayComments);
+
+  const titleCommentsWrap = document.createElement('div');
+  titleCommentsWrap.classList.add('title-comments-wrap');
+  displayComments.appendChild(titleCommentsWrap);
+
+  const titleComments = document.createElement('h3');
+  titleComments.classList.add('title-comments');
+  titleComments.innerHTML = 'Comments';
+  titleCommentsWrap.appendChild(titleComments);
+
+  const counterComments = document.createElement('span');
+  counterComments.classList.add('counter-comments');
+  counterComments.innerHTML = '(50)';
+  titleCommentsWrap.appendChild(counterComments);
+
+  const showCommentsWrap = document.createElement('div');
+  showCommentsWrap.classList.add('show-comments-wrap');
+  displayComments.appendChild(showCommentsWrap);
+
+  const showComments = document.createElement('div');
+  showComments.classList.add('show-comments');
+  showCommentsWrap.appendChild(showComments);
+
+  const nameCommentWrap = document.createElement('div');
+  nameCommentWrap.classList.add('name-comment-wrap');
+  showComments.appendChild(nameCommentWrap);
+
+  const iconLikeComments = document.createElement('img');
+  iconLikeComments.classList.add('icon-like');
+  iconLikeComments.setAttribute('src', './img/icon-msn.png');
+  iconLikeComments.setAttribute('alt', 'icon like');
+  iconLikeComments.setAttribute('width', '20');
+  iconLikeComments.setAttribute('height', '20');
+  nameCommentWrap.appendChild(iconLikeComments);
+
+  const nameComment = document.createElement('p');
+  nameComment.classList.add('user-name-comment');
+  nameComment.innerHTML = 'Vanessa:';
+  nameCommentWrap.appendChild(nameComment);
+
+  const userComment = document.createElement('span');
+  userComment.classList.add('user-comment');
+  userComment.innerHTML = 'I like your page so much!';
+  showComments.appendChild(userComment);
+
+  const addCommentWrap = document.createElement('div');
+  addCommentWrap.classList.add('Add-comment-wrap');
+  popupInfo.appendChild(addCommentWrap);
+
+  const addComment = document.createElement('div');
+  addComment.classList.add('Add-comment');
+  addCommentWrap.appendChild(addComment);
+
+  const addCommentTitle = document.createElement('h3');
+  addCommentTitle.classList.add('add-comment-title');
+  addCommentTitle.innerHTML = 'Add a comment';
+  addComment.appendChild(addCommentTitle);
+
+  const form = document.createElement('form');
+  form.classList.add('form');
+  form.setAttribute('action', '#');
+  form.setAttribute('method', 'get');
+  form.setAttribute('height', '20');
+  addComment.appendChild(form);
+
+  const input = document.createElement('input');
+  input.classList.add('form-input');
+  input.setAttribute('type', 'text');
+  input.setAttribute('name', 'user');
+  input.setAttribute('placeholder', 'Your name');
+  input.setAttribute('aria-label', 'user');
+  input.setAttribute('minlength', '2');
+  input.setAttribute('maxlength', '20');
+  input.setAttribute('required', 'required');
+  form.appendChild(input);
+
+  const textarea = document.createElement('textarea');
+  textarea.classList.add('form-textarea');
+  textarea.setAttribute('maxlength', '500');
+  textarea.setAttribute('placeholder', 'Your insights');
+  textarea.setAttribute('aria-label', 'message');
+  textarea.rows = '7';
+  textarea.setAttribute('required', 'required');
+  form.appendChild(textarea);
+
+  const commentBtn = document.createElement('button');
+  commentBtn.classList.add('comment-btn');
+  commentBtn.setAttribute('type', 'submit');
+  commentBtn.innerText = 'Comment';
+  form.appendChild(commentBtn);
 };
 
 export default showPopup;
