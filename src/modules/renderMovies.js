@@ -1,4 +1,5 @@
 import renderSide from './sideInfo.js';
+import showPopup, { popUp } from './showPopup.js';
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
@@ -53,6 +54,14 @@ const renderMovies = (moviesInfo) => {
         movieWrap.style.backgroundRepeat = 'no-repeat';
         renderSide(movieName, movieScore, movieGenre, movieImg);
       }
+    });
+
+    commentBttn.addEventListener('click', () => {
+      showPopup(element);
+      popUp.classList.remove('hide');
+      document.querySelector('.close-popup').addEventListener('click', () => {
+        popUp.classList.add('hide');
+      });
     });
   });
 };
