@@ -158,35 +158,34 @@ const showPopup = ({ show }) => {
   form.classList.add('form');
   form.setAttribute('action', '#');
   form.setAttribute('method', 'get');
-  form.setAttribute('height', '20')
+  form.setAttribute('height', '20');
   addComment.appendChild(form);
 
   const input = document.createElement('input');
   input.classList.add('form-input');
   input.setAttribute('type', 'text');
   input.setAttribute('name', 'user');
-  input.setAttribute('placeholder', 'Your name')
+  input.setAttribute('placeholder', 'Your name');
   input.setAttribute('aria-label', 'user');
   input.setAttribute('minlength', '2');
-  input.setAttribute('maxlength', '20')
-  input.setAttribute('required', 'required')
+  input.setAttribute('maxlength', '20');
+  input.setAttribute('required', 'required');
   form.appendChild(input);
 
   const textarea = document.createElement('textarea');
   textarea.classList.add('form-textarea');
   textarea.setAttribute('maxlength', '500');
-  textarea.setAttribute('placeholder', 'Your insights')
+  textarea.setAttribute('placeholder', 'Your insights');
   textarea.setAttribute('aria-label', 'message');
-  textarea.rows = '7'
-  textarea.setAttribute('required', 'required')
+  textarea.rows = '7';
+  textarea.setAttribute('required', 'required');
   form.appendChild(textarea);
 
   const commentBtn = document.createElement('button');
   commentBtn.classList.add('comment-btn');
-  commentBtn.setAttribute('type', 'submit')
+  commentBtn.setAttribute('type', 'submit');
   commentBtn.innerText = 'Comment';
   form.appendChild(commentBtn);
-
 };
 
 export default showPopup;
