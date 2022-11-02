@@ -1,6 +1,8 @@
 import renderSide from './sideInfo.js';
 import showPopup, { popUp } from './showPopup.js';
-import resPopup1, { resPopUp } from './reservations.js';
+import resPopup1, { pop } from './reservations.js';
+
+export default renderMovies;
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
@@ -57,24 +59,23 @@ const renderMovies = (moviesInfo) => {
       }
     });
 
-    commentBttn.addEventListener('click', () => {
-      showPopup(element);
-      popUp.classList.remove('hide');
-      document.querySelector('.close-popup').addEventListener('click', () => {
-        popUp.classList.add('hide');
-        window.location.reload();
-      });
+    reserveBttn.addEventListener('click', () => {
+      resPopup1(element);
+      pop.classList.remove('hide');
+      document.querySelector('.close-respopup').addEventListener('click',
+        () => {
+          pop.classList.add('hide');
+          window.location.reload();
+        });
 
-      reserveBttn.addEventListener('click', () => {
-        resPopup1(element);
-        resPopUp.classList.remove('hide');
-        document.querySelector('.close-respopup').addEventListener('click', () => {
-          resPopUp.classList.add('hide');
+      commentBttn.addEventListener('click', () => {
+        showPopup(element);
+        popUp.classList.remove('hide');
+        document.querySelector('.close-popup').addEventListener('click', () => {
+          popUp.classList.add('hide');
           window.location.reload();
         });
       });
     });
   });
 };
-
-export default renderMovies;
