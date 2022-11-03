@@ -14,7 +14,7 @@ export const getComments = async (id) => {
 };
 
 export const postComments = async (item_id, creation_date, username, comment) => {
-  const request = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ti2zNOtDb0yQaQ0kotzz/comments', {
+  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ti2zNOtDb0yQaQ0kotzz/comments', {
     method: 'POST',
     body: JSON.stringify({
       item_id,

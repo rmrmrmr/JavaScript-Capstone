@@ -72,7 +72,7 @@ const showPopup = ({ show }) => {
   const genres = document.createElement('p');
   genres.classList.add('genres', 'text-moreinfo');
   genres.innerHTML = `Genres: ${show.genres}`;
-  if (show.genres === null || show.genres.length === 0 ) {
+  if (show.genres === null || show.genres.length === 0) {
     genres.innerHTML = 'Genres: Coming soon';
   }
   popupMoreInfo.appendChild(genres);
