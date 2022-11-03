@@ -33,13 +33,15 @@ body {
   height: 15vh;
   display: flex;
   padding: 1rem 3rem;
-  justify-content: space-between;
+  justify-content: center;
   position: fixed;
   border-bottom: 1px solid gray;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.548);
   z-index: 10;
+  gap: 10px;
 }
+
 
 #logo-img {
   width: 70px;
