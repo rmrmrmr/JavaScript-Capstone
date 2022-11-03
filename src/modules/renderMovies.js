@@ -1,6 +1,7 @@
 import renderSide from './sideInfo.js';
 import showPopup, { popUp } from './showPopup.js';
 import { getLikes, postLike } from './likes.js';
+import { addComment, getComments } from './comments.js';
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
@@ -81,6 +82,8 @@ const renderMovies = (moviesInfo) => {
         popUp.classList.add('hide');
         window.location.reload();
       });
+      getComments(element.show.id);
+      addComment(element.show.id);
     });
 
     likeBttn.addEventListener('click', async () => {

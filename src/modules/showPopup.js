@@ -115,32 +115,6 @@ const showPopup = ({ show }) => {
   showCommentsWrap.classList.add('show-comments-wrap');
   displayComments.appendChild(showCommentsWrap);
 
-  const showComments = document.createElement('div');
-  showComments.classList.add('show-comments');
-  showCommentsWrap.appendChild(showComments);
-
-  const nameCommentWrap = document.createElement('div');
-  nameCommentWrap.classList.add('name-comment-wrap');
-  showComments.appendChild(nameCommentWrap);
-
-  const iconLikeComments = document.createElement('img');
-  iconLikeComments.classList.add('icon-like');
-  iconLikeComments.setAttribute('src', './img/icon-msn.png');
-  iconLikeComments.setAttribute('alt', 'icon like');
-  iconLikeComments.setAttribute('width', '20');
-  iconLikeComments.setAttribute('height', '20');
-  nameCommentWrap.appendChild(iconLikeComments);
-
-  const nameComment = document.createElement('p');
-  nameComment.classList.add('user-name-comment');
-  nameComment.innerHTML = 'Vanessa:';
-  nameCommentWrap.appendChild(nameComment);
-
-  const userComment = document.createElement('span');
-  userComment.classList.add('user-comment');
-  userComment.innerHTML = 'I like your page so much!';
-  showComments.appendChild(userComment);
-
   const addCommentWrap = document.createElement('div');
   addCommentWrap.classList.add('Add-comment-wrap');
   popupInfo.appendChild(addCommentWrap);

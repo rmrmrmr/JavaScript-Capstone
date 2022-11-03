@@ -306,6 +306,8 @@ footer {
 
 .show-comments-wrap {
   margin-top: 10px;
+  overflow-y: scroll;
+  height: 100px;
 }
 
 .show-comments {
