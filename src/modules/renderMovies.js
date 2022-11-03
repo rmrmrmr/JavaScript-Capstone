@@ -94,6 +94,8 @@ const renderMovies = (moviesInfo) => {
         pop.classList.add('hide');
         window.location.reload();
       });
+      getReservations(element.show.id);
+      createReservations(element.show.id);
     });
 
     likeBttn.addEventListener('click', async () => {
