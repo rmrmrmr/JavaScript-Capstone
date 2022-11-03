@@ -64,7 +64,7 @@ const showPopup = ({ show }) => {
   const premiered = document.createElement('p');
   premiered.classList.add('premiered', 'text-moreinfo');
   premiered.innerHTML = `Premiered: ${show.premiered}`;
-  if (show.premiered === null) {
+  if (show.premiered === null || show.genres.length === 0) {
     premiered.innerHTML = 'Premiered: Coming soon';
   }
   popupMoreInfo.appendChild(premiered);
@@ -72,7 +72,7 @@ const showPopup = ({ show }) => {
   const genres = document.createElement('p');
   genres.classList.add('genres', 'text-moreinfo');
   genres.innerHTML = `Genres: ${show.genres}`;
-  if (show.genres === null) {
+  if (show.genres === null || show.genres.length === 0 ) {
     genres.innerHTML = 'Genres: Coming soon';
   }
   popupMoreInfo.appendChild(genres);
@@ -80,7 +80,7 @@ const showPopup = ({ show }) => {
   const language = document.createElement('p');
   language.classList.add('language', 'text-moreinfo');
   language.innerHTML = `Language: ${show.language}`;
-  if (show.language === null) {
+  if (show.language === null || show.genres.length === 0) {
     language.innerHTML = 'Language: Coming soon';
   }
   popupMoreInfo.appendChild(language);
@@ -88,7 +88,7 @@ const showPopup = ({ show }) => {
   const rating = document.createElement('p');
   rating.classList.add('rating', 'text-moreinfo');
   rating.innerHTML = `Rating: ${show.rating.average}`;
-  if (show.rating.average === null) {
+  if (show.rating.average === null || show.genres.length === 0) {
     rating.innerHTML = 'Rating: Coming soon';
   }
   popupMoreInfo.appendChild(rating);
@@ -106,10 +106,14 @@ const showPopup = ({ show }) => {
   titleComments.innerHTML = 'Comments';
   titleCommentsWrap.appendChild(titleComments);
 
-  const counterComments = document.createElement('span');
-  counterComments.classList.add('counter-comments');
-  counterComments.innerHTML = '(50)';
-  titleCommentsWrap.appendChild(counterComments);
+  const counterCommentsWrap = document.createElement('div');
+  counterCommentsWrap.classList.add('counter-comments-wrap');
+  titleCommentsWrap.appendChild(counterCommentsWrap);
+
+  // const counterComments = document.createElement('span');
+  // counterComments.classList.add('counter-comments');
+  // counterComments.innerHTML = '(50)';
+  // counterCommentsWrap.appendChild(counterComments);
 
   const showCommentsWrap = document.createElement('div');
   showCommentsWrap.classList.add('show-comments-wrap');
