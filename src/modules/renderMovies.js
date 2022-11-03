@@ -2,6 +2,7 @@ import renderSide from './sideInfo.js';
 import showPopup, { popUp } from './showPopup.js';
 import { getLikes, postLike } from './likes.js';
 import { addComment, getComments } from './comments.js';
+import resPopup1, { pop } from './createReservation.js';
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
@@ -84,6 +85,15 @@ const renderMovies = (moviesInfo) => {
       });
       getComments(element.show.id);
       addComment(element.show.id);
+    });
+
+    reserveBttn.addEventListener('click', () => {
+      resPopup1(element);
+      pop.classList.remove('hide');
+      document.querySelector('.close-reservation').addEventListener('click', () => {
+        pop.classList.add('hide');
+        window.location.reload();
+      });
     });
 
     likeBttn.addEventListener('click', async () => {
