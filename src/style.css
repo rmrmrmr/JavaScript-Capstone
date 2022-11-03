@@ -28,20 +28,19 @@ body {
   background-size: cover;
 }
 
-#header {
+header {
+  position: fixed;
   width: 100vw;
   height: 15vh;
   display: flex;
   padding: 1rem 3rem;
   justify-content: center;
-  position: fixed;
   border-bottom: 1px solid gray;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.548);
+  background-color: rgba(0, 0, 0, 0.534);
   z-index: 10;
   gap: 10px;
 }
-
 
 #logo-img {
   width: 70px;
@@ -50,12 +49,6 @@ body {
 
 #navbar {
   width: 40%;
-}
-
-#nav-list {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 
 footer {
