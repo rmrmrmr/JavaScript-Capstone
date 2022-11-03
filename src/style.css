@@ -1,3 +1,5 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+/* stylelint-disable selector-descendant-combinator-no-non-space */
 :root {
   --dark-grayish-blue: hsl(219, 9%, 45%);
   --grayish-blue: hsl(220, 14%, 75%);
@@ -278,7 +280,8 @@ footer {
 /* End popup syle */
 
 /* start display comments style */
-.display-comments {
+.display-comments,
+.display-reservation {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -287,30 +290,37 @@ footer {
 }
 
 .title-comments-wrap,
-.name-comment-wrap {
+.name-comment-wrap,
+.name-reserv-wrap
+.title-reser-wrap {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
 .title-comments,
-.add-comment-title {
+.add-comment-title,
+.title-reservetion {
   letter-spacing: 0.2rem;
 }
 
 .counter-comments,
-.user-comment {
+.user-comment,
+.user-reserv,
+.counter-reservations {
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
 }
 
-.show-comments-wrap {
+.show-comments-wrap,
+.show-reservation-wrap {
   margin-top: 10px;
   overflow-y: scroll;
   height: 100px;
 }
 
-.show-comments {
+.show-comments,
+.show-reserv {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -320,7 +330,8 @@ footer {
   margin-bottom: 5px;
 }
 
-.user-name-comment {
+.user-name-comment,
+.user-name-reserv {
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
 }
@@ -329,7 +340,9 @@ footer {
 
 /* Start form style */
 .Add-comment-wrap,
-.Add-comment {
+.Add-comment,
+.Add-reserv-wrap,
+.Add-reserv {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -345,7 +358,12 @@ footer {
 
 .form-input,
 .form-textarea,
-.comment-btn {
+.comment-btn,
+.form-reserv,
+.form-input-name,
+.form-input-start,
+.form-input-end,
+.reserve-btn {
   padding: 0.5rem;
   background: var(--light-grayish-blue);
   border: 1px solid var(--dark-grayish-blue);
@@ -354,7 +372,8 @@ footer {
   font-family: 'Krona One', sans-serif;
 }
 
-.form-input {
+.form-input,
+.form-reserv {
   width: 22%;
 }
 
@@ -363,7 +382,8 @@ footer {
   height: auto;
 }
 
-.comment-btn {
+.comment-btn,
+.reserve-btn {
   width: 8rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;

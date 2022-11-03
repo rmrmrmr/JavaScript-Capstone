@@ -1,8 +1,10 @@
+/* eslint-disable linebreak-style */
 import renderSide from './sideInfo.js';
 import showPopup, { popUp } from './showPopup.js';
 import { getLikes, postLike } from './likes.js';
 import { addComment, getComments } from './comments.js';
 import resPopup1, { pop } from './createReservation.js';
+import { getReservations, addReservation } from './displayReservation.js';
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
@@ -95,7 +97,7 @@ const renderMovies = (moviesInfo) => {
         window.location.reload();
       });
       getReservations(element.show.id);
-      createReservations(element.show.id);
+      addReservation(element.show.id);
     });
 
     likeBttn.addEventListener('click', async () => {

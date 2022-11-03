@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import renderMovies from './renderMovies.js';
 import renderSide from './sideInfo.js';
 

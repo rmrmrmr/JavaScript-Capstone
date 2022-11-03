@@ -93,81 +93,50 @@ const resPopup1 = ({ show }) => {
   }
   resMoreInfo.appendChild(ratingReser);
 
-  const displayComments = document.createElement('div');
-  displayComments.classList.add('display-comments');
-  reservationInfo.appendChild(displayComments);
+  const displayReservation = document.createElement('div');
+  displayReservation.classList.add('display-reservation');
+  reservationInfo.appendChild(displayReservation);
 
-  const titleCommentsWrap = document.createElement('div');
-  titleCommentsWrap.classList.add('title-comments-wrap');
-  displayComments.appendChild(titleCommentsWrap);
+  const titleReserWrap = document.createElement('div');
+  titleReserWrap.classList.add('title-reser-wrap');
+  displayReservation.appendChild(titleReserWrap);
 
-  const titleComments = document.createElement('h3');
-  titleComments.classList.add('title-comments');
-  titleComments.innerHTML = 'Reservations';
-  titleCommentsWrap.appendChild(titleComments);
+  const titleReservation = document.createElement('h3');
+  titleReservation.classList.add('title-reservetion');
+  titleReservation.innerHTML = 'Reservations';
+  titleReserWrap.appendChild(titleReservation);
 
-  const counterComments = document.createElement('span');
-  counterComments.classList.add('counter-comments');
-  counterComments.innerHTML = '(50)';
-  titleCommentsWrap.appendChild(counterComments);
+  const counterReservation = document.createElement('span');
+  counterReservation.classList.add('counter-reservations');
+  counterReservation.innerHTML = '(50)';
+  titleReserWrap.appendChild(counterReservation);
 
-  const showCommentsWrap = document.createElement('div');
-  showCommentsWrap.classList.add('show-comments-wrap');
-  displayComments.appendChild(showCommentsWrap);
-
-  const showComments = document.createElement('div');
-  showComments.classList.add('show-comments');
-  showCommentsWrap.appendChild(showComments);
-
-  const nameCommentWrap = document.createElement('div');
-  nameCommentWrap.classList.add('name-comment-wrap');
-  showComments.appendChild(nameCommentWrap);
-
-  const iconLikeComments = document.createElement('img');
-  iconLikeComments.classList.add('icon-like');
-  iconLikeComments.setAttribute('src', './img/reserve.png');
-  iconLikeComments.setAttribute('alt', 'icon like');
-  iconLikeComments.setAttribute('width', '40');
-  iconLikeComments.setAttribute('height', '40');
-  nameCommentWrap.appendChild(iconLikeComments);
-
-  const dateReserStart = document.createElement('p');
-  dateReserStart.classList.add('user-comment');
-  dateReserStart.innerHTML = '12/12/2022 - ';
-  nameCommentWrap.appendChild(dateReserStart);
-
-  const dateReserEnd = document.createElement('p');
-  dateReserEnd.classList.add('user-comment');
-  dateReserEnd.innerHTML = '18/12/2022';
-  nameCommentWrap.appendChild(dateReserEnd);
-
-  const userComment = document.createElement('span');
-  userComment.classList.add('user-comment');
-  userComment.innerHTML = 'By Alex';
-  showComments.appendChild(userComment);
+  const showReservsWrap = document.createElement('div');
+  showReservsWrap.classList.add('show-reservation-wrap');
+  displayReservation.appendChild(showReservsWrap);
 
   const addReserWrap = document.createElement('div');
-  addReserWrap.classList.add('Add-comment-wrap');
+  addReserWrap.classList.add('Add-reserv-wrap');
   reservationInfo.appendChild(addReserWrap);
 
   const addReserv = document.createElement('div');
-  addReserv.classList.add('Add-comment');
+  addReserv.classList.add('Add-reserv');
   addReserWrap.appendChild(addReserv);
 
   const addReservTitle = document.createElement('h3');
-  addReservTitle.classList.add('add-comment-title');
+  addReservTitle.classList.add('add-reserv-title');
   addReservTitle.innerHTML = 'Add a comment';
   addReserv.appendChild(addReservTitle);
 
-  const form = document.createElement('form');
-  form.classList.add('form');
-  form.setAttribute('action', '#');
-  form.setAttribute('method', 'get');
-  form.setAttribute('height', '20');
-  addReserv.appendChild(form);
+  const formReserv = document.createElement('form');
+  formReserv.classList.add('form-reserv');
+  formReserv.setAttribute('action', '#');
+  formReserv.setAttribute('method', 'get');
+  formReserv.setAttribute('height', '20');
+  addReserv.appendChild(formReserv);
 
   const inputName = document.createElement('input');
-  inputName.classList.add('form-input');
+  inputName.classList.add('form-input-name');
   inputName.setAttribute('type', 'text');
   inputName.setAttribute('name', 'user');
   inputName.setAttribute('placeholder', 'Your name');
@@ -175,33 +144,33 @@ const resPopup1 = ({ show }) => {
   inputName.setAttribute('minlength', '2');
   inputName.setAttribute('maxlength', '20');
   inputName.setAttribute('required', 'required');
-  form.appendChild(inputName);
+  formReserv.appendChild(inputName);
 
   const inputDateStart = document.createElement('input');
-  inputDateStart.classList.add('form-input');
+  inputDateStart.classList.add('form-input-start');
   inputDateStart.setAttribute('type', 'date');
   inputDateStart.setAttribute('name', 'startDate');
   inputDateStart.setAttribute('value', '2022-11-03');
   inputDateStart.setAttribute('placeholder', 'Start date');
   inputDateStart.setAttribute('aria-label', 'start date');
   inputDateStart.setAttribute('required', 'required');
-  form.appendChild(inputDateStart);
+  formReserv.appendChild(inputDateStart);
 
   const inputDateEnd = document.createElement('input');
-  inputDateEnd.classList.add('form-input');
+  inputDateEnd.classList.add('form-input-end');
   inputDateEnd.setAttribute('type', 'date');
   inputDateEnd.setAttribute('name', 'endDate');
   inputDateEnd.setAttribute('value', '2022-11-11');
   inputDateEnd.setAttribute('placeholder', 'End date');
   inputDateEnd.setAttribute('aria-label', 'end name');
   inputDateEnd.setAttribute('required', 'required');
-  form.appendChild(inputDateEnd);
+  formReserv.appendChild(inputDateEnd);
 
   const reserveBtn = document.createElement('button');
-  reserveBtn.classList.add('comment-btn');
+  reserveBtn.classList.add('reserve-btn');
   reserveBtn.setAttribute('type', 'submit');
   reserveBtn.innerText = 'Reserve';
-  form.appendChild(reserveBtn);
+  formReserv.appendChild(reserveBtn);
 };
 
 export default resPopup1;
