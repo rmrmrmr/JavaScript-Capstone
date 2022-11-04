@@ -13,8 +13,8 @@ const resPopup1 = ({ show }) => {
   reservationImg.classList.add('reservation-img');
   reservationImg.setAttribute('src', show.image);
   reservationImg.setAttribute('alt', 'image movie');
-  reservationImg.setAttribute('width', '330');
-  reservationImg.setAttribute('height', '495');
+  reservationImg.setAttribute('width', '370');
+  reservationImg.setAttribute('height', '570');
   reservationContainer.appendChild(reservationImg);
 
   if (show.image === null) {
@@ -149,7 +149,6 @@ const resPopup1 = ({ show }) => {
   inputDateStart.classList.add('form-input-start');
   inputDateStart.setAttribute('type', 'date');
   inputDateStart.setAttribute('name', 'startDate');
-  inputDateStart.setAttribute('value', '2022-11-03');
   inputDateStart.setAttribute('placeholder', 'Start date');
   inputDateStart.setAttribute('aria-label', 'start date');
   inputDateStart.setAttribute('required', 'required');
@@ -159,7 +158,6 @@ const resPopup1 = ({ show }) => {
   inputDateEnd.classList.add('form-input-end');
   inputDateEnd.setAttribute('type', 'date');
   inputDateEnd.setAttribute('name', 'endDate');
-  inputDateEnd.setAttribute('value', '2022-11-11');
   inputDateEnd.setAttribute('placeholder', 'End date');
   inputDateEnd.setAttribute('aria-label', 'end name');
   inputDateEnd.setAttribute('required', 'required');

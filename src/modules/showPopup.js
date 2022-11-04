@@ -13,8 +13,8 @@ const showPopup = ({ show }) => {
   popupImg.classList.add('popup-img');
   popupImg.setAttribute('src', show.image);
   popupImg.setAttribute('alt', 'image movie');
-  popupImg.setAttribute('width', '330');
-  popupImg.setAttribute('height', '495');
+  popupImg.setAttribute('width', '370');
+  popupImg.setAttribute('height', '570');
   popupContainer.appendChild(popupImg);
 
   if (show.image === null) {
@@ -150,7 +150,7 @@ const showPopup = ({ show }) => {
   textarea.setAttribute('maxlength', '500');
   textarea.setAttribute('placeholder', 'Your insights');
   textarea.setAttribute('aria-label', 'message');
-  textarea.rows = '3';
+  textarea.rows = '6';
   textarea.setAttribute('required', 'required');
   form.appendChild(textarea);
 

@@ -207,7 +207,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 65%;
-  height: 700px;
+  height: 850px;
   background: var(--black);
   padding: 2rem;
   margin-left: 1.1rem;
@@ -252,7 +252,7 @@ footer {
   letter-spacing: 0.1rem;
   text-align: center;
   align-self: center;
-  width: fit-content;
+  width: 400px;
   border-radius: 8px;
   padding: 0.4rem;
 }
@@ -302,10 +302,11 @@ footer {
   letter-spacing: 0.1rem;
 }
 
-.show-comments-wrap {
+.show-comments-wrap,
+.show-reservation-wrap {
   margin-top: 10px;
   overflow-y: scroll;
-  height: 100px;
+  height: 200px;
 }
 
 .show-comments {
@@ -333,7 +334,8 @@ footer {
   width: 100%;
 }
 
-.form {
+.form,
+.form-reserv {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
@@ -343,7 +345,11 @@ footer {
 
 .form-input,
 .form-textarea,
-.comment-btn {
+.form-input-name,
+.form-input-start,
+.form-input-end,
+.comment-btn,
+.reserve-btn {
   padding: 0.5rem;
   background: var(--light-grayish-blue);
   border: 1px solid var(--dark-grayish-blue);

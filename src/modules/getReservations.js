@@ -29,7 +29,7 @@ export const postReservations = async (itemId, username, dateStart, dateEnd) => 
 };
 
 export const addReservation = (id) => {
-  document.querySelector('.form-reserv').addEventListener('click', () => {
+  document.querySelector('.reserve-btn').addEventListener('click', () => {
     if (document.querySelector('.form-input-name').value && document.querySelector('.form-input-start').value && document.querySelector('.form-input-end').value) {
       postReservations(id, document.querySelector('.form-input-name').value, document.querySelector('.form-input-start').value, document.querySelector('.form-input-end').value);
       document.querySelector('.form-input-name').value = '';
