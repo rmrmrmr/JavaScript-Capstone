@@ -1,21 +1,28 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# JavaScript-Capstone
 
-> Write a description of the project
+> This is a solution to JavaScript capstone project. It is created as a team. Apart from technical knowledge, we use a few new processes and tools. Kanban board with tasks, Webpack Bundler, API, GitFlow.
 
 
 ## Built With
 
 - HTML 🏗️
-- Tailwind CSS 🎨🖌️
+- CSS🖌️
 - JavaScript 🤖
 - Webpack 📦
 
 ## Live Demo
 
-[Live Demo](https://github.com/rmrmrmr/Webpack-Boilerplate)
+[Live Demo](https://rmrmrmr.github.io/JavaScript-Capstone/dist/)
 
+## Video Demo
+
+Here's a [video](https://www.loom.com/share/d1ccbbc41f574beebc43762ac1440d71) of @david63011 showing the functionality of the page
+
+### Screenshot
+
+![Desktop Version](./src/img/desktop-version.png)
 
 ## Getting Started
 
@@ -26,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 - Install nodeJS along with NPM
 
 ### Setup
-- Clone this repository into your local environment with `git clone git@github.com:rmrmrmr/Webpack-Boilerplate.git`
+- Clone this repository into your local environment with `git clone git@github.com:rmrmrmr/JavaScript-Capstone.git`
 
 ### Install
 - Just run `npm i` on the root of the project and you're good to go. All of the necesary packages will be installed for you!
@@ -50,6 +57,18 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@ricmtza](https://twitter.com/ricmtza)
 - LinkedIn: [Ricardo Martínez](https://www.linkedin.com/in/ricardomtz7714/)
 
+👤 **Vanessa Oliveros Padron**
+
+- GitHub: [@vvoo21](https://github.com/vvoo21)
+- Twitter: [@vaneoliverosp](https://twitter.com/vaneoliverosp)
+- LinkedIn: [vaneoliverosp](https://www.linkedin.com/in/vaneoliverosp/)
+
+👤 **David Underwood**
+
+- GitHub: [@david63011](https://github.com/david63011)
+- Twitter: [@david630](https://twitter.com/david630)
+- LinkedIn: [davidunderwood](https://www.linkedin.com/in/davidunderwood/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -63,6 +82,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to the Microverse program!
+- Hat tip to anyone whose code was used!
 
 
 ## 📝 License
