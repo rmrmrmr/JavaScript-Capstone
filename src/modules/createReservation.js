@@ -1,6 +1,7 @@
+/* eslint-disable linebreak-style */
 export const pop = document.querySelector('.respopup');
 
-const resPopup1 = ({ show }) => {
+export const resPopup1 = ({ show }) => {
   const reservationBg = document.createElement('div');
   reservationBg.classList.add('reservation-bg');
   pop.appendChild(reservationBg);

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 export const getLikes = async (itemID) => {
   const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ti2zNOtDb0yQaQ0kotzz/likes/';
   const res = await fetch(baseURL);
@@ -9,7 +10,6 @@ export const getLikes = async (itemID) => {
     }
   });
   return likesNum.toString();
-  // console.log(typeof likesNum.toString(), likesNum.toString());
 };
 
 export const postLike = async (itemID) => {

@@ -1,41 +1,41 @@
 /* eslint-disable linebreak-style */
-export const displayReservations = (reservations) => {
-  const reservationsContainer = document.querySelector('.show-comments-wrap');
+const displayReservation = (reservations) => {
+  const reservationContainer = document.querySelector('.show-reservation-wrap');
 
-  reservationsContainer.innerHTML = '';
+  reservationContainer.innerHTML = '';
 
   reservations.forEach((ele) => {
-    const showReservations = document.createElement('div');
-    showReservations.classList.add('show-comments');
-    reservationsContainer.appendChild(showReservations);
+    const showReserv = document.createElement('div');
+    showReserv.classList.add('show-reserv');
+    reservationContainer.appendChild(showReserv);
 
-    const nameReservationsWrap = document.createElement('div');
-    nameReservationsWrap.classList.add('name-comment-wrap');
-    showReservations.appendChild(nameReservationsWrap);
+    const nameReservWrap = document.createElement('div');
+    nameReservWrap.classList.add('name-reserv-wrap');
+    showReserv.appendChild(nameReservWrap);
 
-    const iconLikeComments = document.createElement('img');
-    iconLikeComments.classList.add('icon-like');
-    iconLikeComments.setAttribute('src', './img/reserve.png');
-    iconLikeComments.setAttribute('alt', 'icon like');
-    iconLikeComments.setAttribute('width', '40');
-    iconLikeComments.setAttribute('height', '40');
-    nameReservationsWrap.appendChild(iconLikeComments);
+    const iconReserv = document.createElement('img');
+    iconReserv.classList.add('icon-like');
+    iconReserv.setAttribute('src', './img/reserve.png');
+    iconReserv.setAttribute('alt', 'icon like');
+    iconReserv.setAttribute('width', '40');
+    iconReserv.setAttribute('height', '40');
+    nameReservWrap.appendChild(iconReserv);
 
     const dateReserStart = document.createElement('p');
-    dateReserStart.classList.add('user-comment');
+    dateReserStart.classList.add('user-reserv');
     dateReserStart.innerHTML = `${ele.date_start} - `;
-
-    nameReservationsWrap.appendChild(dateReserStart);
+    nameReservWrap.appendChild(dateReserStart);
 
     const dateReserEnd = document.createElement('p');
-    dateReserEnd.classList.add('user-comment');
-    dateReserEnd.innerHTML = `${ele.date_end}`;
-    nameReservationsWrap.appendChild(dateReserEnd);
+    dateReserEnd.classList.add('user-reserv');
+    dateReserEnd.innerHTML = `${ele.date_end} - `;
+    nameReservWrap.appendChild(dateReserEnd);
 
-    const userComment = document.createElement('span');
-    userComment.classList.add('user-comment');
-    userComment.innerHTML = `by ${ele.username}`;
-
-    nameReservationsWrap.appendChild(userComment);
+    const userReserv = document.createElement('span');
+    userReserv.classList.add('user-name-reserv');
+    userReserv.innerHTML = `by ${ele.username}`;
+    showReserv.appendChild(userReserv);
   });
 };
+
+export default displayReservation;
