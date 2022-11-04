@@ -110,11 +110,6 @@ const showPopup = ({ show }) => {
   counterCommentsWrap.classList.add('counter-comments-wrap');
   titleCommentsWrap.appendChild(counterCommentsWrap);
 
-  // const counterComments = document.createElement('span');
-  // counterComments.classList.add('counter-comments');
-  // counterComments.innerHTML = '(50)';
-  // counterCommentsWrap.appendChild(counterComments);
-
   const showCommentsWrap = document.createElement('div');
   showCommentsWrap.classList.add('show-comments-wrap');
   displayComments.appendChild(showCommentsWrap);
@@ -155,7 +150,7 @@ const showPopup = ({ show }) => {
   textarea.setAttribute('maxlength', '500');
   textarea.setAttribute('placeholder', 'Your insights');
   textarea.setAttribute('aria-label', 'message');
-  textarea.rows = '7';
+  textarea.rows = '3';
   textarea.setAttribute('required', 'required');
   form.appendChild(textarea);
 

@@ -14,11 +14,11 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--white);
   font-family: 'Krona One', sans-serif;
   width: 100vw;
   display: flex;
@@ -35,9 +35,9 @@ header {
   display: flex;
   padding: 1rem 3rem;
   justify-content: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--dark-grayish-blue--);
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.534);
+  background-color: var(--black-modal);
   z-index: 10;
   gap: 10px;
 }
@@ -53,16 +53,17 @@ header {
 
 footer {
   width: 100%;
-  height: 8vh;
+  height: 9vh;
   display: flex;
+  align-items: center;
   padding: 1rem 3rem;
-  border: 1px solid gray;
+  border: 1px solid var(--dark-grayish-blue);
+  background-color: var(--black-modal);
   margin-top: 15vh;
 }
 
 #footer-text {
-  font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 #listSect {
@@ -84,7 +85,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: solid black;
+  border: solid var(--black);
   border-radius: 10px;
   padding: 1% 0;
 }
@@ -96,7 +97,7 @@ footer {
   padding: 5px 0;
   border-radius: 15px;
   background-color: rgba(33, 33, 33, 0.8);
-  color: white;
+  color: var(--white);
   text-align: center;
 }
 
@@ -146,7 +147,7 @@ footer {
 #sideGenre {
   background-color: rgba(127, 176, 255, 0.686);
   border: solid rgb(127, 176, 255);
-  color: #fff;
+  color: var(--white);
   border-radius: 40px;
   padding: 10px;
   font-size: 1rem;
@@ -205,11 +206,13 @@ footer {
 .reservation-info {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 65%;
+  height: 700px;
   background: var(--black);
   padding: 2rem;
   margin-left: 1.1rem;
   border: 1px solid var(--black);
+  border-radius: 8px;
 }
 
 .popup-title-wrap,
@@ -350,11 +353,11 @@ footer {
 }
 
 .form-input {
-  width: 22%;
+  width: 40%;
 }
 
 .form-textarea {
-  width: 40%;
+  width: 70%;
   height: auto;
 }
 

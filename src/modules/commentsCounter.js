@@ -9,6 +9,8 @@ const commentsCounter = (comments) => {
   counterComments.classList.add('counter-comments');
   counterComments.innerHTML = `(${counter})`;
   commentsCounterWrap.appendChild(counterComments);
+
+  return counterComments;
 };
 
 export default commentsCounter;
