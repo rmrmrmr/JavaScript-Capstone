@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo](https://github.com/rmrmrmr/JavaScript-Capstone/dist)
+[Live Demo](https://rmrmrmr.github.io/JavaScript-Capstone/dist/)
 
 ## Video Demo
 
