@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 
 import displayComments from './displayComments.js';
+import commentsCounter from './commentsCounter.js';
 
 export const getComments = async (id) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ti2zNOtDb0yQaQ0kotzz/comments?item_id=${id}`;
@@ -8,6 +9,7 @@ export const getComments = async (id) => {
   const jsonData = await response.json();
   if (jsonData.length) {
     displayComments(jsonData);
+    commentsCounter(jsonData);
   }
 };
 
@@ -25,6 +27,7 @@ export const postComments = async (item_id, creation_date, username, comment) =>
     },
   });
   getComments(item_id);
+  commentsCounter(item_id);
 };
 
 export const addComment = (id) => {
