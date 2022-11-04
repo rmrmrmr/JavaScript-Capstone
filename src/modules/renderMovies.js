@@ -3,6 +3,7 @@ import showPopup, { popUp } from './showPopup.js';
 import { getLikes, postLike } from './likes.js';
 import { addComment, getComments } from './comments.js';
 import resPopup1, { pop } from './createReservation.js';
+import { getReservations, addReservation } from './getReservations.js';
 
 const renderMovies = (moviesInfo) => {
   const listSect = document.getElementById('listSect');
@@ -94,6 +95,8 @@ const renderMovies = (moviesInfo) => {
         pop.classList.add('hide');
         window.location.reload();
       });
+      getReservations(element.show.id);
+      addReservation(element.show.id);
     });
 
     likeBttn.addEventListener('click', async () => {
