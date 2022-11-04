@@ -16,6 +16,10 @@
 
 [Live Demo](https://github.com/rmrmrmr/JavaScript-Capstone/dist)
 
+## Video Demo
+
+Here's a [video](https://www.loom.com/share/d1ccbbc41f574beebc43762ac1440d71) of @david63011 showing the functionality of the page
+
 ### Screenshot
 
 ![Desktop Version](./src/img/desktop-version.png)
