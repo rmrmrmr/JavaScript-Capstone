@@ -4,7 +4,7 @@
   --light-grayish-blue: hsl(223, 64%, 98%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-  --black-modal: hsl(0, 0%, 0%, 0.75);
+  --black-modal: hsl(0, 0%, 0%, 0.8);
   --shadow: 0 1px 3px hsl(219, 9%, 45%, 0.75);
 }
 
@@ -197,6 +197,7 @@ footer {
 .popup-img,
 .reservation-img {
   border-radius: 8px;
+  border: 1px solid var(--grayish-blue);
   z-index: 1;
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
@@ -207,11 +208,11 @@ footer {
   display: flex;
   flex-direction: column;
   width: 65%;
-  height: 850px;
+  height: 900px;
   background: var(--black);
   padding: 2rem;
   margin-left: 1.1rem;
-  border: 1px solid var(--black);
+  border: 1px solid var(--dark-grayish-blue);
   border-radius: 8px;
 }
 
@@ -276,16 +277,18 @@ footer {
 /* End popup syle */
 
 /* start display comments style */
-.display-comments {
+.display-comments,
+.display-reservation {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .title-comments-wrap,
-.name-comment-wrap {
+.title-reser-wrap,
+.name-comment-wrap,
+.name-reserv-wrap {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -297,9 +300,14 @@ footer {
 }
 
 .counter-comments,
-.user-comment {
-  font-size: 0.7rem;
+.user-comment,
+.user-name-reserv {
+  font-size: 0.75rem;
   letter-spacing: 0.1rem;
+}
+
+.user-comment {
+  margin-left: 10px;
 }
 
 .show-comments-wrap,
@@ -309,9 +317,10 @@ footer {
   height: 200px;
 }
 
-.show-comments {
+.show-comments,
+.show-reserv {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 10px;
   border-radius: 5px;
   padding: 0.5rem;
@@ -319,7 +328,8 @@ footer {
   margin-bottom: 5px;
 }
 
-.user-name-comment {
+.user-name-comment,
+.user-reserv {
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
 }
@@ -328,10 +338,18 @@ footer {
 
 /* Start form style */
 .Add-comment-wrap,
-.Add-comment {
+.Add-comment,
+.Add-reserv-wrap,
+.Add-reserv {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 30px;
+}
+
+.Add-comment-wrap,
+.Add-reserv-wrap {
+  border-top: 1px solid var(--grayish-blue);
 }
 
 .form,
@@ -358,7 +376,10 @@ footer {
   font-family: 'Krona One', sans-serif;
 }
 
-.form-input {
+.form-input,
+.form-input-name,
+.form-input-start,
+.form-input-end {
   width: 40%;
 }
 
@@ -367,10 +388,12 @@ footer {
   height: auto;
 }
 
-.comment-btn {
+.comment-btn,
+.reserve-btn {
   width: 8rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  margin-bottom: 20px;
 }
 
 /* End form style */

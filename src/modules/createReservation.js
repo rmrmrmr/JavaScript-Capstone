@@ -13,8 +13,8 @@ const resPopup1 = ({ show }) => {
   reservationImg.classList.add('reservation-img');
   reservationImg.setAttribute('src', show.image);
   reservationImg.setAttribute('alt', 'image movie');
-  reservationImg.setAttribute('width', '370');
-  reservationImg.setAttribute('height', '570');
+  reservationImg.setAttribute('width', '390');
+  reservationImg.setAttribute('height', '700');
   reservationContainer.appendChild(reservationImg);
 
   if (show.image === null) {

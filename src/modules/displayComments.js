@@ -27,7 +27,7 @@ const displayComments = (comments) => {
 
     const nameComment = document.createElement('p');
     nameComment.classList.add('user-name-comment');
-    nameComment.innerText = ele.username;
+    nameComment.innerText = `${ele.username}:`;
     nameCommentWrap.appendChild(nameComment);
 
     const userComment = document.createElement('span');

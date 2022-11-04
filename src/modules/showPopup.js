@@ -13,8 +13,8 @@ const showPopup = ({ show }) => {
   popupImg.classList.add('popup-img');
   popupImg.setAttribute('src', show.image);
   popupImg.setAttribute('alt', 'image movie');
-  popupImg.setAttribute('width', '370');
-  popupImg.setAttribute('height', '570');
+  popupImg.setAttribute('width', '390');
+  popupImg.setAttribute('height', '700');
   popupContainer.appendChild(popupImg);
 
   if (show.image === null) {
