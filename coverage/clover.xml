@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667589869886" clover="3.2.0">
-  <project timestamp="1667589869886" name="All files">
-    <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1" elements="12" coveredelements="11" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1"/>
+<coverage generated="1667597522103" clover="3.2.0">
+  <project timestamp="1667597522103" name="All files">
+    <metrics statements="18" coveredstatements="12" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="2" elements="24" coveredelements="15" complexity="0" loc="18" ncloc="18" packages="1" files="2" classes="2"/>
     <file name="commentsCounter.js" path="C:\Users\vaneo\Escritorio\JavaScript-Capstone\src\modules\commentsCounter.js">
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
@@ -13,6 +13,18 @@
       <line num="10" count="2" type="stmt"/>
       <line num="11" count="2" type="stmt"/>
       <line num="13" count="2" type="stmt"/>
+    </file>
+    <file name="reservationsCounter.js" path="C:\Users\vaneo\Escritorio\JavaScript-Capstone\src\modules\reservationsCounter.js">
+      <metrics statements="9" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>
